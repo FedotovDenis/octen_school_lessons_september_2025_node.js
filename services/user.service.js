@@ -11,6 +11,16 @@ class UserService {
     async getById(id){
         return await userRepository.getById(id)
     }
+
+    async update(id, userDate) {
+        return await userRepository.update(id, userDate)
+    }
+
+    async delete(id){
+        return await userRepository.delete(id);
+    }
+
+
 }
 
 const userService = new UserService();

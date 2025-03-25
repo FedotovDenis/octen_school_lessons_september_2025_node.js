@@ -22,7 +22,32 @@ class UserRepository {
         const index = users.findIndex(user => user.id === Number(id));
         return users[index]
     }
+
+    async update(id, userDate) {
+        const users = await read();
+        const index = users.findIndex(user => user.id === Number(id));
+        if (index !== -1) {
+            users[index] = userDate;
+            await write(users);
+            return users[index];
+        } else {
+            return null;
+        }
+    }
+
+    async delete(id){
+        const users = await read();
+        const index = users.findIndex(user => user.id === Number(id))
+        if (index !== -1){
+            const removed = users.splice(index, 1)[0];
+            await write(users);
+            return removed;
+        }
+        return null;
+    }
 }
+
+
 
 const userRepository = new UserRepository();
 

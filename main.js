@@ -44,6 +44,19 @@ app.post('/users', async (req, res)=>{
     res.json(data)
 })
 
+app.put('/users/:id', async(req, res) => {
+    const id = req.params.id;
+    const userData = req.body;
+    const data = await userService.update(id, userData);
+    res.json(data);
+})
+
+app.delete('/users/:id', async(req, res) => {
+    const id = req.params.id;
+    const data = await userService.delete(id);
+    res.json(data);
+})
+
 app.listen(5000, ()=>{
     console.log('server running on 5000 port');
 })

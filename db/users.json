@@ -1,11 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Olha",
-    "surname": "Popova",
-    "age": "18"
-  },
-  {
     "id": 2,
     "name": "Ivan",
     "surname": "Popova",
@@ -47,6 +41,18 @@
   },
   {
     "id": 13,
+    "name": "Max"
+  },
+  {
+    "id": 14,
+    "name": "Tom"
+  },
+  {
+    "id": 15,
+    "name": "Tom"
+  },
+  {
+    "id": 16,
     "name": "Max"
   }
 ]
